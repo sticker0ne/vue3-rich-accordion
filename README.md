@@ -20,7 +20,7 @@
     <li>Css fully customizable</li>
     <li>W3C validator passed</li>
 </ul>
-<h2>Instalation</h2>
+<h2>Installation</h2>
 NPM module will soon...
 
 At this moment you can copy "/src/components/accordion" folder to your project and use as your own component
