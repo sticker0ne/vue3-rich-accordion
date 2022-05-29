@@ -13,6 +13,10 @@ export default ({ mode }) => {
       : [vue({ reactivityTransform: true })];
 
   return defineConfig({
+    base: process.env.ASSETS_BASE,
+    build: {
+      outDir: process.env.OUT_DIR || "./dist",
+    },
     envDir: "./env",
     envPrefix: "APP",
     plugins,
