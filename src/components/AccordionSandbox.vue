@@ -134,9 +134,16 @@
     display: flex;
     justify-content: space-between;
 
+    @media only screen and (max-width: 700px) {
+      flex-wrap: wrap;
+    }
+
     .v-model-rep {
       min-width: 300px;
       margin-left: 50px;
+      @media only screen and (max-width: 700px) {
+        flex-basis: 100%;
+      }
     }
   }
 
