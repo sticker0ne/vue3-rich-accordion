@@ -6,6 +6,7 @@
 </p>
 
 #Features
+- Zero dependency
 - SSR friendly
 - Block resize friendly
 - v-model controlled
@@ -16,3 +17,4 @@
 - Exclude closed item's content from tab loop
 - All content is provided by slots
 - Css fully customizable
+- W3C validator passed

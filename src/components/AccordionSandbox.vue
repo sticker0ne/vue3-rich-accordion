@@ -37,6 +37,7 @@
   <div class="adv">
     <div class="image">🪗</div>
     <ul>
+      <li>Zero dependency</li>
       <li>SSR friendly</li>
       <li>Block resize friendly</li>
       <li>v-model controlled</li>
@@ -47,6 +48,7 @@
       <li>Exclude closed item's content from tab loop</li>
       <li>All content is provided by slots</li>
       <li>Css fully customizable</li>
+      <li>W3C validator passed</li>
     </ul>
   </div>
   <div class="sandbox">
