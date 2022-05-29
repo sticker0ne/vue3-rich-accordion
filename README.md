@@ -5,21 +5,22 @@
   <a href="https://github.com/sticker0ne/vue3-rich-accordion">Repository</a>
 </p>
 
-#Features
-- Zero dependency
-- SSR friendly
-- Block resize friendly
-- v-model controlled
-- Default-open feature
-- Dynamic content reaction
-- Dynamic items allowed
-- Animated (optional, controlled by css)
-- Exclude closed item's content from tab loop
-- All content is provided by slots
-- Css fully customizable
-- W3C validator passed
-
-#Instalation
+<h2>Features</h2>
+<ul>
+    <li>Zero dependency</li>
+    <li>SSR friendly</li>
+    <li>Block resize friendly</li>
+    <li>v-model controlled</li>
+    <li>Default-open feature</li>
+    <li>Dynamic content reaction</li>
+    <li>Dynamic items allowed</li>
+    <li>Animated (optional, controlled by css)</li>
+    <li>Exclude closed item's content from tab loop</li>
+    <li>All content is provided by slots</li>
+    <li>Css fully customizable</li>
+    <li>W3C validator passed</li>
+</ul>
+<h2>Instalation</h2>
 NPM module will soon...
 
 At this moment you can copy "/src/components/accordion" folder to your project and use as your own component
