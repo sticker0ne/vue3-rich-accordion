@@ -1,2 +1,11 @@
 # vue3-rich-accordion
-vue 3 rich acordion component library
+- SSR friendly
+- Block resize friendly
+- v-model controlled
+- Default-open feature
+- Dynamic content reaction
+- Dynamic items allowed
+- Animated (optional, controlled by css)
+- Exclude closed item's content from tab loop
+- All content is provided by slots
+- Css fully customizable
