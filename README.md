@@ -1,4 +1,4 @@
-<p align="center" style="font-size: 120px">🪗</span>
+<h1 align="center" style="font-size: 120px">🪗</h1>
 <p align="center" style="font-size: 30px">Vue 3 rich accordion component</span>
 <p align="center">
   <a href="https://sticker0ne.github.io/vue3-rich-accordion/">Demo</a> |
