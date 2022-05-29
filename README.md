@@ -18,3 +18,8 @@
 - All content is provided by slots
 - Css fully customizable
 - W3C validator passed
+
+#Instalation
+NPM module will soon...
+
+At this moment you can copy "/src/components/accordion" folder to your project and use as your own component
