@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { computed, onMounted, provide, ref } from "vue";
+  import { computed, onBeforeUnmount, onMounted, provide, ref } from "vue";
   import type { IAccordionItemInitPayload, IAccordionListState, IAccordionProvided } from "./accordion.types";
   import { PROVIDE_INJECT_KEY_ACCORDION_LIST } from "./accordion.types";
 
@@ -74,6 +74,11 @@
   }
 
   onMounted(observeElements);
+  onBeforeUnmount(() => {
+    if (!resizeObserver) return;
+    resizeObserver.disconnect();
+    resizeObserver = null;
+  });
 
   provide<IAccordionProvided>(PROVIDE_INJECT_KEY_ACCORDION_LIST, {
     init: onItemInit,
