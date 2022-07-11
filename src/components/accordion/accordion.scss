@@ -20,6 +20,14 @@
 
       > .accordion-item__summary-icon {
         transition: transform 300ms ease-in-out;
+
+        &--default {
+          &::before {
+            //Default icon if #icon slot is not provided
+            content: '▲';
+            line-height: 22px;
+          }
+        }
       }
     }
 
@@ -29,7 +37,7 @@
 
       > .accordion-item__summary {
         > .accordion-item__summary-icon {
-          transform: translate(-25%, 0) rotate(180deg);
+          transform: rotate(180deg);
         }
       }
     }
