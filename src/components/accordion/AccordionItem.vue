@@ -93,9 +93,16 @@
     @transitionend="onTransitionEnd"
   >
     <summary class="accordion-item__summary" @click.prevent="onSummaryClick">
-      <span class="accordion-item__summary-title"><slot name="summary" /></span>
-      <span class="accordion-item__summary-icon"><slot name="icon" /></span>
+      <span class="accordion-item__summary-title">
+        <slot name="summary" />
+      </span>
+      <span v-if="$slots.icon" class="accordion-item__summary-icon">
+        <slot name="icon" />
+      </span>
+      <span v-else class="accordion-item__summary-icon accordion-item__summary-icon--default" />
     </summary>
-    <div class="accordion-item__content"><slot /></div>
+    <div class="accordion-item__content">
+      <slot />
+    </div>
   </details>
 </template>

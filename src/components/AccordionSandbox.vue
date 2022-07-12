@@ -88,8 +88,7 @@
           {{ item }}
         </AccordionItem>
         <AccordionItem id="mId3">
-          <template #summary>Last item here</template>
-          <template #icon> 🚀</template>
+          <template #summary>Last item (with default icon) here</template>
           <div>
             <h1>
               Please subscribe <a href="https://www.youtube.com/channel/UCxKF1Edfy3LfvAsnveD-OVA">youtube channel</a>,
