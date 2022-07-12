@@ -35,7 +35,7 @@
 
 <template>
   <div class="adv">
-    <div class="image">🪗</div>
+    <div class="adv__image">🪗</div>
     <ul>
       <li>Zero dependency</li>
       <li>SSR friendly</li>
@@ -52,7 +52,7 @@
     </ul>
   </div>
   <div class="sandbox">
-    <div class="accordion-block" :style="{ width: accordionBlockWidthPercents + '%' }">
+    <div class="sandbox__accordion-block" :style="{ width: accordionBlockWidthPercents + '%' }">
       <AccordionList v-model:state="state" :open-multiple-items="openMultipleItems">
         <AccordionItem id="mId1" default-opened>
           <template #summary> Summary one</template>
@@ -92,7 +92,7 @@
           <div>
             <h1>
               Please subscribe <a href="https://www.youtube.com/channel/UCxKF1Edfy3LfvAsnveD-OVA">youtube channel</a>,
-              <a href="https://t.me/developers_workshop">telegram channel</a>share video, stay stars and likes
+              <a href="https://t.me/developers_workshop">telegram channel</a>, share video, stay stars and likes
             </h1>
           </div>
         </AccordionItem>
@@ -121,7 +121,7 @@
       <button @click="removeDynamicItem">Remove</button>
 
       <h3>Block resize</h3>
-      <div>now width is: {{ accordionBlockWidthPercents }}%</div>
+      <p>now width is: {{ accordionBlockWidthPercents }}%</p>
       <button @click="accordionBlockWidthPercents -= 20">Smaller</button>
       <button @click="accordionBlockWidthPercents += 20">Bigger</button>
     </div>
@@ -134,6 +134,7 @@
   .sandbox {
     display: flex;
     justify-content: space-between;
+    font-family: "Roboto", sans-serif;
 
     @media only screen and (max-width: 700px) {
       flex-wrap: wrap;
@@ -142,8 +143,33 @@
     .v-model-rep {
       min-width: 300px;
       margin-left: 50px;
+
       @media only screen and (max-width: 700px) {
         flex-basis: 100%;
+      }
+
+      & button {
+        font-size: 14px;
+        line-height: 20px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 6px;
+
+        &:nth-child(2n + 1) {
+          background: #6002ee;
+          color: #ffffff;
+          margin-right: 12px;
+          border: 1px solid #6002ee;
+        }
+
+        &:nth-child(2n) {
+          background: transparent;
+          border: 1px solid #6002ee;
+          color: #6002ee;
+          margin-right: 12px;
+        }
       }
     }
   }
@@ -155,7 +181,7 @@
     border-bottom: 2px solid gray;
     margin-bottom: 50px;
 
-    .image {
+    &__image {
       font-size: 150px;
     }
   }
