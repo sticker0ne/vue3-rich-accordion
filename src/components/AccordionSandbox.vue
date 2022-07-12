@@ -35,7 +35,7 @@
 
 <template>
   <div class="adv">
-    <div class="image">🪗</div>
+    <div class="adv__image">🪗</div>
     <ul>
       <li>Zero dependency</li>
       <li>SSR friendly</li>
@@ -52,7 +52,7 @@
     </ul>
   </div>
   <div class="sandbox">
-    <div class="accordion-block" :style="{ width: accordionBlockWidthPercents + '%' }">
+    <div class="sandbox__accordion-block" :style="{ width: accordionBlockWidthPercents + '%' }">
       <AccordionList v-model:state="state" :open-multiple-items="openMultipleItems">
         <AccordionItem id="mId1" default-opened>
           <template #summary> Summary one</template>
@@ -182,7 +182,7 @@
     border-bottom: 2px solid gray;
     margin-bottom: 50px;
 
-    .image {
+    &__image {
       font-size: 150px;
     }
   }

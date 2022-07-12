@@ -1,14 +1,13 @@
-
-.accordion-list {
+:root {
   --acco-border-radius: 8px;
   --acco-light: #EEEEEE;
   --acco-lightest: #FFFFFF;
   --acco-dark: #9E9E9E;
   --acco-darkest: #000000;
   --acco-active: #6002EE;
-
+}
+.accordion-list {
   width: 100%;
-  font-family: 'Roboto', sans-serif;
   background: var(--acco-lightest);
 
   .accordion-item {
