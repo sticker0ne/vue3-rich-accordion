@@ -175,7 +175,6 @@
   }
 
   .adv {
-    width: 100vw;
     display: flex;
     justify-content: center;
     border-bottom: 2px solid gray;
