@@ -96,6 +96,7 @@ interface IAccordionItemProps {
 
 <h2>Customization + Styles</h2>
 You can use default styles via
+
 ```typescript
 import "vue3-rich-accordion/accordion-library-styles.css";
 //import "vue3-rich-accordion/accordion-library-styles.scss"; if you wanna to use scss
