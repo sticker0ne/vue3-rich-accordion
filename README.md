@@ -1,4 +1,4 @@
-<div align="center" style="font-size: 120px"><image :src="https://sticker0ne.github.io/vue3-rich-accordion/img.png"/></div>
+<div style="width: 100%; display: flex; align-content: center; justify-content: center"><img src="https://sticker0ne.github.io/vue3-rich-accordion/img.png" /></div>
 <p align="center" style="font-size: 30px">Vue 3 rich accordion component</span>
 <p align="center">
   <a href="https://sticker0ne.github.io/vue3-rich-accordion/">Demo</a> |
