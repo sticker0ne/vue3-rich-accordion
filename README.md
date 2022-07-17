@@ -38,6 +38,7 @@ npm i vue3-rich-accordion
 
 <h2>Adding to project</h2>
 via plugin
+
 ```typescript
 // ./src/main.ts
 
