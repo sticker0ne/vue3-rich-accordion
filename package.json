@@ -3,7 +3,7 @@
   "license": "MIT",
   "homepage": "https://github.com/sticker0ne/vue3-rich-accordion",
   "author": "St1cker0ne",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "files": ["dist"],
   "main": "./dist/accordion-library.umd.js",
   "module": "./dist/accordion-library.es.js",
