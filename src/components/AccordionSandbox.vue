@@ -49,6 +49,14 @@
       <li>Css fully customizable</li>
       <li>W3C validator passed</li>
     </ul>
+    <div class="adv__links">
+      <ul>
+        <li><a href="https://sticker0ne.github.io/vue3-rich-accordion/">Demo</a></li>
+        <li><a href="https://github.com/sticker0ne/vue3-rich-accordion">Repository</a></li>
+        <li><a href="https://www.npmjs.com/package/vue3-rich-accordion">NPM</a></li>
+        <li><a href="https://www.youtube.com/watch?v=ubtEdHwq8QU">YouTube</a></li>
+      </ul>
+    </div>
   </div>
   <div class="sandbox">
     <div class="sandbox__accordion-block" :style="{ width: accordionBlockWidthPercents + '%' }">
