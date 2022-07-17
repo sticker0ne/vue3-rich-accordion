@@ -1,6 +1,9 @@
 {
   "name": "vue3-rich-accordion",
-  "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/sticker0ne/vue3-rich-accordion",
+  "author": "St1cker0ne",
+  "version": "0.0.4",
   "files": ["dist"],
   "main": "./dist/accordion-library.umd.js",
   "module": "./dist/accordion-library.es.js",
@@ -9,7 +12,9 @@
     ".": {
       "import": "./dist/accordion-library.es.js",
       "require": "./dist/accordion-library.umd.js"
-    }
+    },
+    "./accordion-library-styles.css": "./dist/accordion-library-styles.css",
+    "./accordion-library-styles.scss": "./dist/accordion-library-styles.scss"
   },
   "scripts": {
     "dev": "vite",

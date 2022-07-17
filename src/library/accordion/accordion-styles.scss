@@ -1,0 +1,92 @@
+:root {
+  --acco-border-radius: 8px;
+  --acco-light: #EEEEEE;
+  --acco-lightest: #FFFFFF;
+  --acco-dark: #9E9E9E;
+  --acco-darkest: #000000;
+  --acco-active: #6002EE;
+}
+.accordion-list {
+  width: 100%;
+  background: var(--acco-lightest);
+
+  .accordion-item {
+    margin-top: 6px;
+    --content-height: 0px;
+    background-color: var(--acco-light);
+    border-radius: var(--acco-border-radius);
+
+    //summary block height + 12px padding top + 12px padding bottom + 1px border top + 1px border bottom
+    height: calc(var(--summary-height) + 26px);
+    overflow: hidden;
+    transition: height 300ms ease-in-out;
+    border: 1px solid var(--acco-dark);
+
+    > .accordion-item__summary {
+      padding: 12px;
+      cursor: pointer;
+      color: var(--acco-darkest);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      transition: color 300ms ease-in-out;
+
+      &:hover {
+        color: var(--acco-active);
+        transition: color 300ms ease-in-out;
+      }
+
+      > .accordion-item__summary-icon {
+        transition: transform 300ms ease-in-out;
+
+        &--default {
+          &::before {
+            //Default icon if #icon slot is not provided
+            content: '▲';
+            line-height: 22px;
+          }
+        }
+      }
+    }
+
+    &--open {
+      // content block height + summary block height + 12px summary padding top + 12px summary padding bottom + 1px summary border top + 1px summary border bottom + 12px content padding top +12px content padding bottom + 1px content border bottom
+      height: calc(var(--summary-height) + var(--content-height) + 51px);
+      background: var(--acco-lightest);
+
+      > .accordion-item__summary {
+        > .accordion-item__summary-icon {
+          transform: rotate(180deg);
+        }
+      }
+
+      > .accordion-item__summary {
+        background: var(--acco-light);
+        color: var(--acco-active);
+        border-bottom: 1px solid var(--acco-dark);
+      }
+    }
+
+    &--disabled {
+      > .accordion-item__summary {
+        color: var(--acco-dark);
+        cursor: default;
+
+        &:hover {
+          color: var(--acco-dark);
+        }
+      }
+    }
+
+    > .accordion-item__content {
+      background-color: var(--acco-lightest);
+      border-top: none;
+      padding: 12px;
+    }
+  }
+}
