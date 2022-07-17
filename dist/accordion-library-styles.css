@@ -1,0 +1,71 @@
+@charset "UTF-8";
+:root {
+  --acco-border-radius: 8px;
+  --acco-light: #EEEEEE;
+  --acco-lightest: #FFFFFF;
+  --acco-dark: #9E9E9E;
+  --acco-darkest: #000000;
+  --acco-active: #6002EE;
+}
+
+.accordion-list {
+  width: 100%;
+  background: var(--acco-lightest);
+}
+.accordion-list .accordion-item {
+  margin-top: 6px;
+  --content-height: 0px;
+  background-color: var(--acco-light);
+  border-radius: var(--acco-border-radius);
+  height: calc(var(--summary-height) + 26px);
+  overflow: hidden;
+  transition: height 300ms ease-in-out;
+  border: 1px solid var(--acco-dark);
+}
+.accordion-list .accordion-item > .accordion-item__summary {
+  padding: 12px;
+  cursor: pointer;
+  color: var(--acco-darkest);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  transition: color 300ms ease-in-out;
+}
+.accordion-list .accordion-item > .accordion-item__summary:hover {
+  color: var(--acco-active);
+  transition: color 300ms ease-in-out;
+}
+.accordion-list .accordion-item > .accordion-item__summary > .accordion-item__summary-icon {
+  transition: transform 300ms ease-in-out;
+}
+.accordion-list .accordion-item > .accordion-item__summary > .accordion-item__summary-icon--default::before {
+  content: "▲";
+  line-height: 22px;
+}
+.accordion-list .accordion-item--open {
+  height: calc(var(--summary-height) + var(--content-height) + 51px);
+  background: var(--acco-lightest);
+}
+.accordion-list .accordion-item--open > .accordion-item__summary > .accordion-item__summary-icon {
+  transform: rotate(180deg);
+}
+.accordion-list .accordion-item--open > .accordion-item__summary {
+  background: var(--acco-light);
+  color: var(--acco-active);
+  border-bottom: 1px solid var(--acco-dark);
+}
+.accordion-list .accordion-item--disabled > .accordion-item__summary {
+  color: var(--acco-dark);
+  cursor: default;
+}
+.accordion-list .accordion-item--disabled > .accordion-item__summary:hover {
+  color: var(--acco-dark);
+}
+.accordion-list .accordion-item > .accordion-item__content {
+  background-color: var(--acco-lightest);
+  border-top: none;
+  padding: 12px;
+}

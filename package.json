@@ -1,22 +1,30 @@
 {
   "name": "vue3-rich-accordion",
   "version": "0.0.1",
-  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/accordion-library.umd.js",
+  "module": "./dist/accordion-library.es.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/accordion-library.es.js",
+      "require": "./dist/accordion-library.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "build:gh-pages": "vue-tsc --noEmit && OUT_DIR=docs ASSETS_BASE=/vue3-rich-accordion/ vite build",
-    "preview": "vite preview --port 5050",
+    "build:library": "ts-node --skipProject buildLibrary.ts",
+    "build:gh-pages": "vite build --mode gh-pages",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix"
   },
-  "dependencies": {
-    "@rushstack/eslint-patch": "^1.1.2",
-    "vue": "^3.2.31",
-    "vue-router": "^4.0.12"
+  "dependencies": {},
+  "peerDependencies": {
+    "vue": "^3.2.31"
   },
   "devDependencies": {
-    "@types/node": "^16.11.25",
+    "@rushstack/eslint-patch": "^1.1.2",
+    "@types/node": "^18.0.5",
     "@vitejs/plugin-vue": "^2.2.2",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
@@ -30,6 +38,9 @@
     "ts-node": "^10.7.0",
     "typescript": "^4.5.5",
     "vite": "^2.8.4",
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.12",
+    "vue-script-tsc": "^1.3.0",
     "vue-tsc": "^0.31.4"
   }
 }

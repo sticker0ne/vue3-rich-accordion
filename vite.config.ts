@@ -12,19 +12,32 @@ export default ({ mode }) => {
       ? [vue({ reactivityTransform: true }), friendlyTypeImports()]
       : [vue({ reactivityTransform: true })];
 
-  return defineConfig({
-    base: process.env.ASSETS_BASE,
-    build: {
-      outDir: process.env.OUT_DIR || "./dist",
+  const resolve = {
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+      "~": fileURLToPath(new URL(".", import.meta.url)),
     },
-    envDir: "./env",
-    envPrefix: "APP",
-    plugins,
-    resolve: {
-      alias: {
-        "@": fileURLToPath(new URL("./src", import.meta.url)),
-        "~": fileURLToPath(new URL(".", import.meta.url)),
+  };
+
+  const envDir = "./env";
+  const envPrefix = "APP";
+
+  if (mode === "gh-pages")
+    return defineConfig({
+      base: "/vue3-rich-accordion/",
+      build: {
+        outDir: "docs",
       },
-    },
+      envDir,
+      envPrefix,
+      plugins,
+      resolve,
+    });
+
+  return defineConfig({
+    envDir,
+    envPrefix,
+    plugins,
+    resolve,
   });
 };

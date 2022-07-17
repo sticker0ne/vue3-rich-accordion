@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-  import AccordionList from "./accordion/AccordionList.vue";
-  import AccordionItem from "./accordion/AccordionItem.vue";
+  import { AccordionList, AccordionItem } from "@/library";
   import { computed, ref } from "vue";
 
   const state = ref<Record<string, boolean>>({});
@@ -129,7 +128,7 @@
 </template>
 
 <style lang="scss">
-  @import "./accordion/accordion";
+  @import "../library/accordion/accordion-styles";
 
   .sandbox {
     display: flex;
